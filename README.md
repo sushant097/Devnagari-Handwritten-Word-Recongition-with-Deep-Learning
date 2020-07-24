@@ -59,7 +59,7 @@ Recognized: "होसले"
 Probability: 0.7297366
 ```
 # DEMO
-![Demo of The Code Run](images/Devnagari_Word_Recognition.gif "Demo of the Output")
+![Demo of The Code Run](https://github.com/sushant097/Devnagari-Handwritten-Word-Recongition-with-Deep-Learning/blob/master/images/Devnagari_Word_Recognition_final.gif "Demo of the Output")
 
 
 # Further Improvement
