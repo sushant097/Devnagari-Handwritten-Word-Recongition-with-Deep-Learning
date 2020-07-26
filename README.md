@@ -33,7 +33,7 @@ The model detail found
 #### Dataset Used
 IIT Devnagari Word Dataset. You can download it from [Devanagiri Dataset (IIIT-HW-Dev)](https://cvit.iiit.ac.in/research/projects/cvit-projects/indic-hw-data).
 
-######The trained model CER=12.988% and trained on IIT Devnagari Word dataset with some additional created dataset.
+###### The trained model CER=12.988% and trained on IIT Devnagari Word dataset with some additional created dataset.
 
 To Train the model from scratch
 ```markdown
