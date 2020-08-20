@@ -26,7 +26,6 @@ class Batch:
 
 
 class DataLoader:
-	"loads data which corresponds to IAM format, see: http://www.fki.inf.unibe.ch/databases/iam-handwriting-database" 
 
 	def __init__(self, filePath, batchSize, imgSize, maxTextLen):
 		"loader for dataset at given location, preprocess images and text according to parameters"
@@ -43,7 +42,7 @@ class DataLoader:
 			lines = f.readlines()
 		lines = [x.strip() for x in lines] # removing newline
 		chars = set()
-		print(lines[2])
+		#print(lines[2]) # just check what in lines
 		for line in lines:
 			# ignore comment line
 			if not line or line[0]=='#':
@@ -70,8 +69,8 @@ class DataLoader:
 
 
 
-		# split into training and validation set: 95% - 5%
-		splitIdx = int(0.95 * len(self.samples))
+		# split into training and validation set: 90% - 10%
+		splitIdx = int(0.90 * len(self.samples))
 		self.trainSamples = self.samples[:splitIdx]
 		self.validationSamples = self.samples[splitIdx:]
 
@@ -90,8 +89,9 @@ class DataLoader:
 		# print("TrainSet: {}, TestSet: {}".format(len(self.trainSamples), len(self.validationSamples)))
 		# print("Total chars: ",len(self.charList))  # length: 109
 		# charList = ''.join([str(x) for x in self.charList])
-		# print(charList)
-		# codecs.open('../model/charList.txt','w', encoding='utf-8').write(charList)
+		# print(self.charList)
+		# uncomment if new ground truth file is added or training from scratch
+		# codecs.open('../model/charList.txt','w', encoding='utf-8').write(self.charList)
 
 	def truncateLabel(self, text, maxTextLen):
 		# ctc_loss can't compute loss if it cannot find a mapping between text label and input 
