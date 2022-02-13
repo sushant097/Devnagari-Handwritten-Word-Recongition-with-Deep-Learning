@@ -74,6 +74,17 @@ You can also use [Word Segmentation](https://github.com/githubharald/WordSegment
 You can try to make handwritten recognition on any language too.</i>
 This project gain lots of motivation from [githubharald/SimpleHTR](https://github.com/githubharald/SimpleHTR) Repo.
 
-Feel Free to improve this project with pull Request.
+# Citation
+If you use any part of this project in your work, please cite:
+
+```bash
+@techreport{Devnagari-handwritten-word-recognition-2019,
+  title={Devnagari Handwritten Word Recognition},
+  author={Gautam Sushant},
+  institution={Tribhuvan University},
+  year={2019}
+}
+```
+For the completion of the eighth semester in the Computer Science program at Tribhuvan University. July 2019.
 
 
