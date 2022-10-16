@@ -12,7 +12,7 @@ class DecoderType:
 
 
 class Model: 
-	"minimalistic TF model for HTR"
+	"minimalistic TF model for HTR - Support Devnagari Language"
 
 	# model constants
 	batchSize = 25
