@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete Show</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/bootstrap.css') }}">
+    <script src="{{url_for('static', filename='js/jquery.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>बधाई!</strong><b> फाइल </b> अपलोड सफल भयो ।
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!--Static Folder is predefined in Jinja-->
+        <img src="{{url_for('static', filename=image_name)}} ">
+        <h2><strong>बधाई!</strong><b> फाइल </b> अपलोड सफल भयो.</h2>
+<!--{#        <figure class="figure">#}-->
+<!--{#          <img src="{{url_for('static', filename=image_name)}} " class="figure-img img-fluid rounded" alt="Upload Image.">#}-->
+<!--{#            <figcaption class="figure-caption" ><h2><strong>बधाई!</strong><b> फाइल </b> अपलोड सफल भयो.</h2></figcaption>#}-->
+<!--{#        </figure>#}-->
+        <p class="bg-success">
+            <b>Recognized Text</b><br>
+        </p>
+        <textarea class="form-control" id="textPred"></textarea>
+           <p id="textProb" class="bg-primary">
+               Recognized Probability: {{result[1]}}
+           </p>
+    </div>
+</body>
+<script>
+     document.getElementById("textPred").value = "{{result[0]}}"
+</script>
+
+</html>
